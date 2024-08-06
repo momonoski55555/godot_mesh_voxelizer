@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bo3xqhoqgtbuv"]
+
+[ext_resource type="Script" path="res://voxelizer.gd" id="1_xtpfh"]
+[ext_resource type="PackedScene" uid="uid://reh1af6nrxg" path="res://camera.tscn" id="2_fiw54"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vur43"]
+
+[sub_resource type="Sky" id="Sky_dt2ic"]
+sky_material = SubResource("ProceduralSkyMaterial_vur43")
+
+[sub_resource type="Environment" id="Environment_fsd1m"]
+background_mode = 2
+sky = SubResource("Sky_dt2ic")
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_xtpfh")
+grid_size = 0.5
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(5.62428, 0, 0, 0, 1.57149, 0, 0, 0, 2.31293, 2.27961, 2.0911, 0.333997)
+use_collision = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fsd1m")
+
+[node name="Camera" parent="." instance=ExtResource("2_fiw54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, 3.1746)
+
+[node name="Camera2" parent="." instance=ExtResource("2_fiw54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, 3.1746)

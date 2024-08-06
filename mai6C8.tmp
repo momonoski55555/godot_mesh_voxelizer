@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo3xqhoqgtbuv"]
+
+[ext_resource type="Script" path="res://voxelizer.gd" id="1_xtpfh"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_xtpfh")
+grid_size = 1.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(5.62428, 0, 0, 0, 0.550362, 0, 0, 0, 2.31293, 0, 0, 0)
+use_collision = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.335433, 0, 10.2545)
