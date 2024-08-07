@@ -17,6 +17,10 @@ ambient_light_color = Color(1, 1, 1, 1)
 script = ExtResource("1_xtpfh")
 grid_size = 0.5
 
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(5.62428, 0, 0, 0, 1.57149, 0, 0, 0, 2.31293, 2.27961, 2.0911, 0.333997)
+use_collision = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fsd1m")
 
@@ -25,8 +29,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, 3.1746)
 
 [node name="Camera2" parent="." instance=ExtResource("2_fiw54")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, 3.1746)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999657, 0, -0.0261769, 0, 1, 0, 0.0261769, 0, 0.999657, 2.975, 0, 3.85)
-use_collision = true
-size = Vector3(3.42175, 1, 6.73193)

@@ -18,3 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 DebugDraw="*res://addons/zylann.debug_draw/debug_draw.gd"
+
+[display]
+
+window/size/always_on_top=true
+
+[editor]
+
+movie_writer/movie_file="D:/School_management_system/godot_mesh_voxelizer/ZXC/DASD.avi"

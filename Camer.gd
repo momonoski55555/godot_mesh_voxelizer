@@ -4,7 +4,7 @@ extends Camera3D
 var Sens: float = 0.3
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pass
 
 func  _input(event: InputEvent) -> void:
 	
